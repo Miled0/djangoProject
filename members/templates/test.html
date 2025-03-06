@@ -1,0 +1,7 @@
+{% extends "Master.html" %} {%block title%} test {%endblock%} {%block body%}
+<div style="text-align: center">
+  {%for x in fruits%}
+  <h2>{{x}}</h2>
+  {% endfor %}
+</div>
+{%endblock%}

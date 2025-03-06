@@ -1,0 +1,16 @@
+{%extends "Master.html"%} {%block title%} Members {%endblock%}
+<ul>
+  {% block content %}
+  <div class="mycard">
+    <h1>Members</h1>
+    <ul>
+      {% for x in mymembers %}
+      <li onclick="window.location = 'details/{{ x.id }}'">
+        {{ x.firstname }} {{ x.lastname }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <a href="/">Back to Main page</a>
+  {%endblock%}
+</ul>
