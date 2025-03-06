@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-c8)$8)l8z%od%7n5p%3-ey)=sd+37ro-unhmjtc+smcpge9=g^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://djangoproject-47ri.onrender.com']
+ALLOWED_HOSTS = ['https://djangoproject-47ri.onrender.com','localhost',
+    '127.0.0.1',]
 
 
 # Application definition
@@ -133,3 +134,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True  # Redirect HTTP → HTTPS
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
